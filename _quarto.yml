@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Seunguk Kang"
+  description: "Researcher · AI & Computational Biology"
+  site-url: "https://seungukkang.github.io"
+  favicon: "assets/img/favicon.ico"
+
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Notes"
+        href: notes/index.qmd
+      - text: "Talks"
+        href: talks/index.qmd
+      - text: "CV"
+        href: cv/index.qmd
+      - text: "About"
+        href: about/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/seungukkang
+        aria-label: GitHub
+    tools:
+      - icon: sun
+        toggle: light
+      - icon: moon
+        toggle: dark
+
+  page-footer:
+    center: |
+      © 2025 Seunguk Kang · Built with [Quarto](https://quarto.org)
+
+format:
+  html:
+    theme:
+      light: [cosmo, custom.scss]
+      dark: [darkly, custom.scss]
+    toc: false
+    number-sections: false
+    smooth-scroll: true
+    highlight-style: github
+    mainfont: "Inter"
+    monofont: "JetBrains Mono"
+    fontsize: 1rem
+    linestretch: 1.7
+
+execute:
+  freeze: auto

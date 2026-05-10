@@ -1,0 +1,17 @@
+# Quarto build artifacts
+/.quarto/
+/_freeze/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Python cache (if using Jupyter/Python notebooks)
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+**/*.quarto_ipynb

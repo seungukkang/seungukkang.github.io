@@ -1,0 +1,680 @@
+/*-- scss:defaults --*/
+
+/*-- Custom Design System --*/
+/*-- Seunguk Kang · GitHub Blog --*/
+
+/* =====================================================
+   Google Fonts Import
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* =====================================================
+   Quarto SCSS Variables — Light Mode (Ivory Base)
+   ===================================================== */
+
+// Background — warm ivory, not pure white
+$body-bg: #FAF8F5;
+$body-color: #1A1916;
+$link-color: #4F46E5;
+$link-decoration: none;
+$link-hover-color: #3730A3;
+
+// Navbar
+$navbar-bg: #FAF8F5;
+$navbar-fg: #1A1916;
+$navbar-hl: #4F46E5;
+
+// Code
+$code-bg: #EFECE4;
+$code-color: #2D2B27;
+
+// Font
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+$font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+$font-size-root: 16px;
+$line-height-base: 1.75;
+
+// Borders
+$border-color: #E2DDD4;
+$border-radius: 8px;
+
+/*-- scss:rules --*/
+
+/* =====================================================
+   CSS Custom Properties (for runtime dark/light)
+   ===================================================== */
+:root {
+  --sk-bg-primary: #FAF8F5;
+  --sk-bg-secondary: #F3F0EA;
+  --sk-bg-code: #EFECE4;
+  --sk-text-primary: #1A1916;
+  --sk-text-secondary: #5C5849;
+  --sk-text-muted: #8C8476;
+  --sk-accent: #4F46E5;
+  --sk-accent-hover: #3730A3;
+  --sk-accent-muted: #EEF0FF;
+  --sk-border: #E2DDD4;
+  --sk-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+  --sk-shadow-hover: 0 4px 16px rgba(0,0,0,0.10);
+  --sk-max-width: 740px;
+  --sk-card-radius: 10px;
+}
+
+[data-bs-theme="dark"] {
+  --sk-bg-primary: #111110;
+  --sk-bg-secondary: #1C1B19;
+  --sk-bg-code: #252420;
+  --sk-text-primary: #E8E6E1;
+  --sk-text-secondary: #9B9488;
+  --sk-text-muted: #6B6459;
+  --sk-accent: #6D66FF;
+  --sk-accent-hover: #8B85FF;
+  --sk-accent-muted: #1E1D3A;
+  --sk-border: #2A2924;
+  --sk-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+  --sk-shadow-hover: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* =====================================================
+   Base & Typography
+   ===================================================== */
+body {
+  background-color: var(--sk-bg-primary);
+  color: var(--sk-text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Max-width constraint for readability
+.content, .quarto-container, #quarto-content {
+  max-width: var(--sk-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: var(--sk-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--sk-accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--sk-text-primary);
+  letter-spacing: -0.02em;
+}
+
+code, pre, kbd, samp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+}
+
+pre {
+  background: var(--sk-bg-code);
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-card-radius);
+  padding: 1.25rem;
+}
+
+code:not(pre code) {
+  background: var(--sk-bg-code);
+  color: var(--sk-text-primary);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--sk-border);
+  margin: 2.5rem 0;
+}
+
+/* =====================================================
+   Navbar
+   ===================================================== */
+.navbar {
+  background-color: var(--sk-bg-primary) !important;
+  border-bottom: 1px solid var(--sk-border);
+  padding: 0.85rem 1.5rem;
+  backdrop-filter: blur(8px);
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--sk-text-primary) !important;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-link {
+    color: var(--sk-text-secondary) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      color: var(--sk-text-primary) !important;
+      background: var(--sk-bg-secondary);
+    }
+
+    &.active {
+      color: var(--sk-accent) !important;
+      background: var(--sk-accent-muted);
+    }
+  }
+}
+
+/* =====================================================
+   Dark mode toggle button
+   ===================================================== */
+.quarto-color-scheme-toggle {
+  .bi {
+    font-size: 1rem;
+    color: var(--sk-text-secondary);
+    transition: color 0.2s;
+  }
+  &:hover .bi {
+    color: var(--sk-text-primary);
+  }
+}
+
+/* =====================================================
+   Page layout
+   ===================================================== */
+#quarto-content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--sk-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* =====================================================
+   Cards (used in Projects, Research, etc.)
+   ===================================================== */
+.sk-card {
+  background: var(--sk-bg-secondary);
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-card-radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--sk-shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+/* =====================================================
+   Badges
+   ===================================================== */
+.sk-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  &.badge-accent {
+    background: var(--sk-accent-muted);
+    color: var(--sk-accent);
+  }
+
+  &.badge-featured {
+    background: #FEF3C7;
+    color: #92400E;
+  }
+
+  &.badge-preprint {
+    background: #F0FDF4;
+    color: #166534;
+  }
+
+  &.badge-category {
+    background: var(--sk-bg-code);
+    color: var(--sk-text-secondary);
+  }
+}
+
+[data-bs-theme="dark"] {
+  .sk-badge.badge-featured {
+    background: #2D1F00;
+    color: #FCD34D;
+  }
+  .sk-badge.badge-preprint {
+    background: #052E16;
+    color: #4ADE80;
+  }
+}
+
+/* =====================================================
+   Home Page — Profile Section
+   ===================================================== */
+.sk-home-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.sk-profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--sk-border);
+  display: block;
+  margin: 0 auto;
+}
+
+.sk-profile-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.2rem;
+}
+
+.sk-profile-role {
+  color: var(--sk-text-secondary);
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+
+.sk-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--sk-text-secondary);
+    background: var(--sk-bg-secondary);
+    border: 1px solid var(--sk-border);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--sk-accent);
+      border-color: var(--sk-accent);
+      background: var(--sk-accent-muted);
+      text-decoration: none;
+    }
+  }
+}
+
+/* =====================================================
+   Home Page — Recent sections
+   ===================================================== */
+.sk-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--sk-border);
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sk-text-muted);
+    margin: 0;
+  }
+
+  a {
+    font-size: 0.82rem;
+    color: var(--sk-accent);
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; text-underline-offset: 3px; }
+  }
+}
+
+/* =====================================================
+   Publication / Research List
+   ===================================================== */
+.sk-pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sk-pub-item {
+  padding: 1.25rem 1.5rem;
+  background: var(--sk-bg-secondary);
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-card-radius);
+  transition: box-shadow 0.2s ease;
+
+  &:hover { box-shadow: var(--sk-shadow-hover); }
+
+  .pub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+    color: var(--sk-text-primary);
+  }
+
+  .pub-authors {
+    font-size: 0.875rem;
+    color: var(--sk-text-secondary);
+    margin: 0 0 0.5rem;
+  }
+
+  .pub-venue {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--sk-text-muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .pub-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      border: 1px solid var(--sk-border);
+      color: var(--sk-text-secondary);
+      background: var(--sk-bg-primary);
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        border-color: var(--sk-accent);
+        color: var(--sk-accent);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pub-abstract-toggle {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--sk-accent);
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    &:hover { text-decoration: underline; text-underline-offset: 3px; }
+  }
+
+  .pub-abstract {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--sk-text-secondary);
+    line-height: 1.65;
+    border-left: 2px solid var(--sk-border);
+    padding-left: 1rem;
+  }
+}
+
+/* =====================================================
+   Projects Grid
+   ===================================================== */
+.sk-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sk-project-card {
+  background: var(--sk-bg-secondary);
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-card-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--sk-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--sk-text-primary);
+  }
+
+  .project-desc {
+    font-size: 0.875rem;
+    color: var(--sk-text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.25rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      border: 1px solid var(--sk-border);
+      color: var(--sk-text-secondary);
+      background: var(--sk-bg-primary);
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        border-color: var(--sk-accent);
+        color: var(--sk-accent);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* =====================================================
+   Notes Listing (overrides Quarto defaults)
+   ===================================================== */
+.quarto-listing {
+  margin-top: 1.5rem;
+}
+
+.quarto-listing-default .list-item {
+  border: none;
+  border-bottom: 1px solid var(--sk-border);
+  padding: 1rem 0;
+  margin: 0;
+
+  &:last-child { border-bottom: none; }
+
+  .listing-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--sk-text-primary);
+  }
+
+  .listing-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--sk-text-muted);
+  }
+
+  .listing-reading-time {
+    font-size: 0.78rem;
+    color: var(--sk-text-muted);
+  }
+
+  .listing-categories .listing-category {
+    background: var(--sk-bg-code);
+    color: var(--sk-text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    border-radius: 4px;
+    padding: 0.15em 0.5em;
+    border: none;
+    margin-right: 0.25rem;
+
+    &:hover {
+      background: var(--sk-accent-muted);
+      color: var(--sk-accent);
+    }
+  }
+}
+
+/* =====================================================
+   CV Page
+   ===================================================== */
+.sk-cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--sk-accent);
+  color: #fff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background: var(--sk-accent-hover);
+    transform: translateY(-1px);
+    text-decoration: none !important;
+  }
+}
+
+.sk-pdf-viewer {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-card-radius);
+  background: var(--sk-bg-secondary);
+}
+
+/* =====================================================
+   Empty State
+   ===================================================== */
+.sk-empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--sk-text-muted);
+
+  .empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--sk-text-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* =====================================================
+   Footer
+   ===================================================== */
+.nav-footer {
+  border-top: 1px solid var(--sk-border);
+  background: var(--sk-bg-primary);
+  padding: 1.25rem 0;
+  font-size: 0.82rem;
+  color: var(--sk-text-muted);
+
+  a {
+    color: var(--sk-text-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--sk-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+/* =====================================================
+   Responsive & Utility
+   ===================================================== */
+.sk-divider {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--sk-border);
+}
+
+@media (max-width: 768px) {
+  .page-title { font-size: 1.6rem; }
+  .sk-home-grid { grid-template-columns: 1fr; }
+  .sk-projects-grid { grid-template-columns: 1fr; }
+  .sk-pub-item { padding: 1rem; }
+}

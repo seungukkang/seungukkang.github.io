@@ -1,0 +1,12 @@
+---
+title: "About"
+page-layout: article
+---
+
+```{=html}
+<div class="sk-empty-state">
+  <div class="empty-icon">🙋</div>
+  <h3>This page is being updated.</h3>
+  <p>Personal introduction and background will appear here soon.</p>
+</div>
+```

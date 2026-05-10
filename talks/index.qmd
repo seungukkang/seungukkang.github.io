@@ -1,0 +1,14 @@
+---
+title: "Talks"
+page-layout: article
+---
+
+```{=html}
+<p class="page-subtitle">Conference presentations, posters, and invited talks.</p>
+
+<div class="sk-empty-state">
+  <div class="empty-icon">🎤</div>
+  <h3>No talks yet — stay tuned.</h3>
+  <p>Presentations and posters will appear here as they happen.</p>
+</div>
+```

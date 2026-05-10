@@ -1,0 +1,14 @@
+---
+title: "Notes"
+page-layout: article
+---
+
+```{=html}
+<p class="page-subtitle">Paper reviews, ideas, and miscellaneous writing.</p>
+
+<div class="sk-empty-state">
+  <div class="empty-icon">✏️</div>
+  <h3>Notes coming soon.</h3>
+  <p>Paper reviews, ideas, and posts will appear here as they are written.</p>
+</div>
+```

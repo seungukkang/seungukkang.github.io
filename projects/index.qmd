@@ -1,0 +1,14 @@
+---
+title: "Projects"
+page-layout: article
+---
+
+```{=html}
+<p class="page-subtitle">Tools, research code, and side projects.</p>
+
+<div class="sk-empty-state">
+  <div class="empty-icon">🛠️</div>
+  <h3>Projects coming soon.</h3>
+  <p>Research code and tools will appear here as they are released.</p>
+</div>
+```
