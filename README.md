@@ -1,6 +1,6 @@
 # seungukkang.github.io
 
-Personal academic blog and research portfolio.
+Personal academic profile.
 
 **Live site**: https://seungukkang.github.io
 
@@ -21,27 +21,8 @@ quarto render           # build to docs/
 ```
 ├── _quarto.yml          # site config
 ├── custom.scss          # design system
-├── index.qmd            # Home
-├── research/            # Publications
-├── projects/            # Projects
-├── notes/               # Notes (Paper Review / Post / Ideas / Scribbles)
-├── talks/               # Talks
-├── cv/                  # CV
-├── about/               # About
+├── index.qmd            # About
 └── docs/                # Rendered output → GitHub Pages
-```
-
-## Adding a Note
-
-Create `notes/my-note.qmd` with frontmatter:
-
-```yaml
----
-title: "My Note Title"
-date: 2025-05-10
-categories: [Paper Review]   # Paper Review | Post | Ideas | Scribbles
-description: "One-line summary shown in the listing."
----
 ```
 
 ## Deployment

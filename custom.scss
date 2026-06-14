@@ -210,7 +210,7 @@ hr {
 }
 
 /* =====================================================
-   Cards (used in Projects, Research, etc.)
+   Reusable cards
    ===================================================== */
 .sk-card {
   background: var(--sk-bg-secondary);
@@ -271,19 +271,50 @@ hr {
 }
 
 /* =====================================================
-   Home Page — Profile Section
+   About Page
    ===================================================== */
-.sk-home-grid {
+.sk-about-page {
+  margin-top: 0.5rem;
+}
+
+.sk-about-hero {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 160px;
+  gap: 2.5rem;
   align-items: start;
-  margin-top: 1rem;
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+.sk-about-intro {
+  color: var(--sk-text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin: 0 0 1.25rem;
+  max-width: 560px;
+}
+
+.sk-about-section {
+  margin: 2.25rem 0;
+
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--sk-border);
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.sk-muted {
+  color: var(--sk-text-muted);
 }
 
 .sk-profile-img {
@@ -339,309 +370,6 @@ hr {
 }
 
 /* =====================================================
-   Home Page — Recent sections
-   ===================================================== */
-.sk-section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--sk-border);
-
-  h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--sk-text-muted);
-    margin: 0;
-  }
-
-  a {
-    font-size: 0.82rem;
-    color: var(--sk-accent);
-    font-weight: 500;
-    text-decoration: none;
-
-    &:hover { text-decoration: underline; text-underline-offset: 3px; }
-  }
-}
-
-/* =====================================================
-   Publication / Research List
-   ===================================================== */
-.sk-pub-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sk-pub-item {
-  padding: 1.25rem 1.5rem;
-  background: var(--sk-bg-secondary);
-  border: 1px solid var(--sk-border);
-  border-radius: var(--sk-card-radius);
-  transition: box-shadow 0.2s ease;
-
-  &:hover { box-shadow: var(--sk-shadow-hover); }
-
-  .pub-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0 0.3rem;
-    color: var(--sk-text-primary);
-  }
-
-  .pub-authors {
-    font-size: 0.875rem;
-    color: var(--sk-text-secondary);
-    margin: 0 0 0.5rem;
-  }
-
-  .pub-venue {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--sk-text-muted);
-    margin: 0 0 0.75rem;
-  }
-
-  .pub-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    align-items: center;
-
-    a {
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      border: 1px solid var(--sk-border);
-      color: var(--sk-text-secondary);
-      background: var(--sk-bg-primary);
-      text-decoration: none;
-      transition: all 0.15s ease;
-
-      &:hover {
-        border-color: var(--sk-accent);
-        color: var(--sk-accent);
-        text-decoration: none;
-      }
-    }
-  }
-
-  .pub-abstract-toggle {
-    margin-top: 0.75rem;
-    font-size: 0.82rem;
-    color: var(--sk-accent);
-    cursor: pointer;
-    user-select: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-
-    &:hover { text-decoration: underline; text-underline-offset: 3px; }
-  }
-
-  .pub-abstract {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--sk-text-secondary);
-    line-height: 1.65;
-    border-left: 2px solid var(--sk-border);
-    padding-left: 1rem;
-  }
-}
-
-/* =====================================================
-   Projects Grid
-   ===================================================== */
-.sk-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.sk-project-card {
-  background: var(--sk-bg-secondary);
-  border: 1px solid var(--sk-border);
-  border-radius: var(--sk-card-radius);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-
-  &:hover {
-    box-shadow: var(--sk-shadow-hover);
-    transform: translateY(-2px);
-  }
-
-  .project-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--sk-text-primary);
-  }
-
-  .project-desc {
-    font-size: 0.875rem;
-    color: var(--sk-text-secondary);
-    line-height: 1.6;
-    flex: 1;
-    margin: 0;
-  }
-
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-top: 0.25rem;
-  }
-
-  .project-links {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-
-    a {
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      border: 1px solid var(--sk-border);
-      color: var(--sk-text-secondary);
-      background: var(--sk-bg-primary);
-      text-decoration: none;
-      transition: all 0.15s ease;
-
-      &:hover {
-        border-color: var(--sk-accent);
-        color: var(--sk-accent);
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-/* =====================================================
-   Notes Listing (overrides Quarto defaults)
-   ===================================================== */
-.quarto-listing {
-  margin-top: 1.5rem;
-}
-
-.quarto-listing-default .list-item {
-  border: none;
-  border-bottom: 1px solid var(--sk-border);
-  padding: 1rem 0;
-  margin: 0;
-
-  &:last-child { border-bottom: none; }
-
-  .listing-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--sk-text-primary);
-  }
-
-  .listing-date {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--sk-text-muted);
-  }
-
-  .listing-reading-time {
-    font-size: 0.78rem;
-    color: var(--sk-text-muted);
-  }
-
-  .listing-categories .listing-category {
-    background: var(--sk-bg-code);
-    color: var(--sk-text-secondary);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    border-radius: 4px;
-    padding: 0.15em 0.5em;
-    border: none;
-    margin-right: 0.25rem;
-
-    &:hover {
-      background: var(--sk-accent-muted);
-      color: var(--sk-accent);
-    }
-  }
-}
-
-/* =====================================================
-   CV Page
-   ===================================================== */
-.sk-cv-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--sk-accent);
-  color: #fff !important;
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none !important;
-  transition: background 0.2s ease, transform 0.15s ease;
-  margin-bottom: 2rem;
-
-  &:hover {
-    background: var(--sk-accent-hover);
-    transform: translateY(-1px);
-    text-decoration: none !important;
-  }
-}
-
-.sk-pdf-viewer {
-  width: 100%;
-  height: 80vh;
-  border: 1px solid var(--sk-border);
-  border-radius: var(--sk-card-radius);
-  background: var(--sk-bg-secondary);
-}
-
-/* =====================================================
-   Empty State
-   ===================================================== */
-.sk-empty-state {
-  text-align: center;
-  padding: 5rem 2rem;
-  color: var(--sk-text-muted);
-
-  .empty-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--sk-text-secondary);
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-
-/* =====================================================
    Footer
    ===================================================== */
 .nav-footer {
@@ -674,7 +402,4 @@ hr {
 
 @media (max-width: 768px) {
   .page-title { font-size: 1.6rem; }
-  .sk-home-grid { grid-template-columns: 1fr; }
-  .sk-projects-grid { grid-template-columns: 1fr; }
-  .sk-pub-item { padding: 1rem; }
 }

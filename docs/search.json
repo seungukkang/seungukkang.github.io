@@ -1,44 +1,9 @@
 [
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Download or view my CV below.\n\n\n  \n    \n    \n    \n  \n  Download PDF\n\n\n\n\n\n\n\n\n  \n    📄\n    CV coming soon.\n    The PDF will appear here once uploaded."
-  },
-  {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Conference presentations, posters, and invited talks.\n\n\n  🎤\n  No talks yet — stay tuned.\n  Presentations and posters will appear here as they happen."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "Publications, preprints, and ongoing work.\n\n\n  📄\n  Publications coming soon.\n  Papers and preprints will appear here as they are published."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Tools, research code, and side projects.\n\n\n  🛠️\n  Projects coming soon.\n  Research code and tools will appear here as they are released."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "About",
     "section": "",
-    "text": "🙋\n  This page is being updated.\n  Personal introduction and background will appear here soon."
-  },
-  {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Paper reviews, ideas, and miscellaneous writing.\n\n\n  ✏️\n  Notes coming soon.\n  Paper reviews, ideas, and posts will appear here as they are written."
+    "text": "Seunguk Kang\n      Researcher · AI & Computational Biology\n      \n        I am interested in AI for science, computational biology, and research tools\n        that make scientific work more precise and reproducible.\n      \n      \n        \n          \n          GitHub\n        \n      \n    \n    \n  \n\n  \n\n  \n    Research Interests\n    \n      AI for science\n      Computational biology\n      Machine learning systems for research workflows\n    \n  \n\n  \n    Education\n    To be updated.\n  \n\n  \n    Publications\n    Publications and preprints will be listed here.\n  \n\n  \n    Experience\n    Research and work experience will be added here.\n  \n\n  \n    Contact\n    \n      The best current place to find my work is\n      GitHub."
   }
 ]
