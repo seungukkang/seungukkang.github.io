@@ -248,18 +248,173 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
   background: var(--sk-accent-muted) !important;
 }
 
+@media (min-width: 992px) {
+  .navbar .navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .navbar-brand-container {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  #navbarCollapse {
+    order: 2;
+    flex: 0 1 auto;
+    margin-left: auto;
+    min-width: 0;
+  }
+
+  #navbarCollapse .navbar-nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .quarto-navbar-tools {
+    order: 3;
+    flex: 0 0 auto;
+  }
+}
+
 /* =====================================================
    Dark mode toggle button
    ===================================================== */
 .quarto-color-scheme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.15rem;
+  padding: 0 !important;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--sk-text-secondary);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+
   .bi {
-    font-size: 1rem;
-    color: var(--sk-text-secondary);
+    color: inherit;
+    font-size: 1.03rem;
+    line-height: 1;
     transition: color 0.2s;
   }
-  &:hover .bi {
-    color: var(--sk-text-primary);
+
+  .bi::before {
+    content: "\f5a2" !important;
+    width: auto !important;
+    height: auto !important;
+    background-image: none !important;
+    background-repeat: initial !important;
+    background-size: initial !important;
+    font-family: "bootstrap-icons" !important;
   }
+
+  &:hover,
+  &:focus {
+    color: #D97706;
+    background: #FEF3C7;
+    border-color: #FDE68A;
+    text-decoration: none;
+  }
+
+  &.alternate {
+    color: #A7C7FF;
+
+    .bi::before {
+      content: "\f497" !important;
+      background-image: none !important;
+    }
+
+    &:hover,
+    &:focus {
+      color: #D3E3FF;
+      background: rgba(167, 199, 255, 0.14);
+      border-color: rgba(167, 199, 255, 0.28);
+    }
+  }
+}
+
+/* =====================================================
+   Navbar search button
+   ===================================================== */
+#quarto-search {
+  order: 4;
+  flex: 0 0 auto;
+  width: 2rem;
+  margin-left: 0.25rem;
+  margin-right: 0;
+}
+
+#quarto-search.type-overlay .aa-Autocomplete,
+#quarto-search .aa-Autocomplete {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#quarto-search .aa-DetachedSearchButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.46rem;
+  justify-content: center;
+  width: 2rem;
+  max-width: 100%;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--sk-border) !important;
+  border-radius: 999px;
+  color: var(--sk-text-secondary);
+  background: var(--sk-bg-secondary) !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+#quarto-search .aa-DetachedSearchButton:hover,
+#quarto-search .aa-DetachedSearchButton:focus {
+  color: var(--sk-accent);
+  background: var(--sk-accent-muted);
+  border-color: color-mix(in srgb, var(--sk-accent) 36%, var(--sk-border));
+}
+
+#quarto-search .aa-DetachedSearchButtonIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  color: currentColor;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#quarto-search .aa-DetachedSearchButtonIcon svg {
+  width: 0.92rem;
+  height: 0.92rem;
+  color: currentColor;
+  fill: currentColor;
+  stroke-width: 2;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+#quarto-search .aa-SubmitIcon {
+  color: currentColor !important;
+  fill: currentColor !important;
+}
+
+#quarto-search .aa-DetachedSearchButtonPlaceholder,
+#quarto-search .aa-DetachedSearchButtonQuery {
+  display: none;
+}
+
+#quarto-search .aa-DetachedSearchButton::after {
+  content: none;
 }
 
 /* =====================================================
@@ -521,7 +676,6 @@ body.quarto-dark,
   padding: 1.15rem 0;
   border-bottom: 1px solid var(--sk-border);
   min-width: 0;
-  position: relative;
 
   &:first-child {
     padding-top: 0;
@@ -685,7 +839,6 @@ body.quarto-dark,
   padding: 1rem 0;
   border-bottom: 1px solid var(--sk-border);
   min-width: 0;
-  position: relative;
 
   &:first-child {
     padding-top: 0;
@@ -694,22 +847,6 @@ body.quarto-dark,
   &:last-child {
     border-bottom: none;
     padding-bottom: 0;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: -0.9rem;
-    top: 1rem;
-    bottom: 1rem;
-    width: 2px;
-    background: var(--sk-accent);
-    opacity: 0;
-    transition: opacity 0.18s ease;
-  }
-
-  &:hover::before {
-    opacity: 1;
   }
 }
 
@@ -995,6 +1132,22 @@ body.quarto-dark .sk-award-badge {
     color: var(--sk-text-secondary);
     font-size: 0.78rem;
     line-height: 1.45;
+  }
+
+  #quarto-search {
+    width: 2rem;
+    margin-left: 0.35rem;
+    margin-right: 0.2rem;
+  }
+
+  #quarto-search .aa-DetachedSearchButton {
+    width: 2rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  #quarto-search .aa-DetachedSearchButton::after {
+    content: none;
   }
 
   .sk-about-hero {
