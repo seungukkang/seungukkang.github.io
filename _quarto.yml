@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Seunguk Kang"
-  description: "Researcher · AI & Computational Biology"
+  description: "Researcher · AI & Computational Chemistry"
   site-url: "https://seungukkang.github.io"
   favicon: "assets/img/favicon.ico"
 
@@ -12,6 +12,18 @@ website:
     left:
       - text: "About"
         href: index.qmd
+      - text: "Education"
+        href: index.qmd#education
+      - text: "Research"
+        href: index.qmd#research-experiences
+      - text: "Publications"
+        href: index.qmd#publications
+      - text: "Presentations"
+        href: index.qmd#selected-presentations
+      - text: "Awards"
+        href: index.qmd#honors-and-awards
+      - text: "Activities"
+        href: index.qmd#extra-activities
 
   page-footer:
     center: |
@@ -30,6 +42,3 @@ format:
     monofont: "JetBrains Mono"
     fontsize: 1rem
     linestretch: 1.7
-
-execute:
-  freeze: auto
