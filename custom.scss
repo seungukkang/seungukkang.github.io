@@ -9,24 +9,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* =====================================================
-   Quarto SCSS Variables — Light Mode (Ivory Base)
+   Quarto SCSS Variables
    ===================================================== */
 
-// Background — clean academic profile surface
-$body-bg: #FFFFFF;
-$body-color: #17202A;
-$link-color: #2563EB;
 $link-decoration: none;
-$link-hover-color: #1D4ED8;
-
-// Navbar
-$navbar-bg: #FFFFFF;
-$navbar-fg: #17202A;
-$navbar-hl: #2563EB;
-
-// Code
-$code-bg: #F3F6FA;
-$code-color: #243142;
 
 // Font
 $font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
@@ -35,7 +21,6 @@ $font-size-root: 16px;
 $line-height-base: 1.7;
 
 // Borders
-$border-color: #E3E8EF;
 $border-radius: 8px;
 
 /*-- scss:rules --*/
@@ -60,6 +45,7 @@ $border-radius: 8px;
   --sk-card-radius: 8px;
 }
 
+body.quarto-dark,
 [data-bs-theme="dark"] {
   --sk-bg-primary: #111827;
   --sk-bg-secondary: #172033;
@@ -67,9 +53,9 @@ $border-radius: 8px;
   --sk-text-primary: #F3F4F6;
   --sk-text-secondary: #C6CDD8;
   --sk-text-muted: #8F9AAA;
-  --sk-accent: #8AB4FF;
-  --sk-accent-hover: #B5CCFF;
-  --sk-accent-muted: #18304F;
+  --sk-accent: #A7C7FF;
+  --sk-accent-hover: #D3E3FF;
+  --sk-accent-muted: #1E3A5F;
   --sk-border: #2B3546;
   --sk-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
   --sk-shadow-hover: 0 4px 16px rgba(0,0,0,0.4);
@@ -352,6 +338,7 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
   }
 }
 
+body.quarto-dark,
 [data-bs-theme="dark"] {
   .sk-badge.badge-featured {
     background: #2D1F00;
@@ -543,7 +530,7 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
   height: 56px;
   border: 1px solid var(--sk-border);
   border-radius: var(--sk-card-radius);
-  background: var(--sk-bg-primary);
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -871,15 +858,21 @@ body.quarto-dark .sk-pub-type-badge {
   align-items: center;
   margin-left: 0.45rem;
   padding: 0.08rem 0.42rem;
-  border: 1px solid var(--sk-border);
+  border: 1px solid #FDE68A;
   border-radius: 999px;
-  color: var(--sk-text-muted);
-  background: var(--sk-bg-secondary);
+  color: #92400E;
+  background: #FEF3C7;
   font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.35;
   vertical-align: 0.08em;
   white-space: nowrap;
+}
+
+body.quarto-dark .sk-award-badge {
+  color: #FCD34D;
+  background: rgba(146, 64, 14, 0.24);
+  border-color: rgba(252, 211, 77, 0.34);
 }
 
 .sk-type-badge {
