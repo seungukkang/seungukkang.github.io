@@ -218,66 +218,60 @@ include-in-header:
     <div class="sk-activity-list">
       <article class="sk-activity">
         <div>
-          <h3>Spring Conference of the Korean Chemical Society</h3>
+          <h3>Spring Conference of the Korean Chemical Society <span class="sk-type-badge">Poster</span></h3>
           <p>Chiral Indenyl Rh-Catalyzed Enantioselective Olefin 1,2-Arylamination</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Poster presentation</span>
           <span>2025</span>
         </div>
       </article>
 
       <article class="sk-activity">
         <div>
-          <h3>Research Presentation for Chemistry Department Workshop</h3>
+          <h3>Research Presentation for Chemistry Department Workshop <span class="sk-type-badge">Oral</span></h3>
           <p>Chiral Indenyl Rh-Catalyzed Enantioselective Olefin 1,2-Arylamination</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Oral presentation</span>
           <span>2024</span>
         </div>
       </article>
 
       <article class="sk-activity">
         <div>
-          <h3>Future Chemists Research Conference of the Korean Chemical Society</h3>
+          <h3>Future Chemists Research Conference of the Korean Chemical Society <span class="sk-type-badge">Poster</span></h3>
           <p>Biocompatible MOFs Developed by Facile Ultra-Fast Room Temperature Synthesis</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Poster presentation</span>
           <span>2021</span>
         </div>
       </article>
 
       <article class="sk-activity">
         <div>
-          <h3>Thailand International Science Fair</h3>
+          <h3>Thailand International Science Fair <span class="sk-type-badge">Oral</span></h3>
           <p>Improvement of Gas Adsorption Efficiency of Fragile Porphyrin-based MOFs</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Oral presentation</span>
           <span>2021</span>
         </div>
       </article>
 
       <article class="sk-activity">
         <div>
-          <h3>Autumn Conference of the Korean Polymer Society</h3>
+          <h3>Autumn Conference of the Korean Polymer Society <span class="sk-type-badge">Poster</span></h3>
           <p>Improvement of Gas Adsorption Efficiency of Fragile Porphyrin-based MOFs</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Poster presentation</span>
           <span>2020</span>
         </div>
       </article>
 
       <article class="sk-activity">
         <div>
-          <h3>Japan Super Science Fair</h3>
+          <h3>Japan Super Science Fair <span class="sk-type-badge">Oral</span></h3>
           <p>Optimizing Synthesis Conditions of PPF-4: Effect of Acid Addition on Crystal Growth</p>
         </div>
         <div class="sk-activity-meta">
-          <span>Oral presentation</span>
           <span>2020</span>
         </div>
       </article>
@@ -309,8 +303,8 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Talent Award of Korea</h3>
-          <p>National Prize, Ministry of Education, Republic of Korea.</p>
+          <h3>Talent Award of Korea <span class="sk-award-badge">National Prize</span></h3>
+          <p>Ministry of Education, Republic of Korea.</p>
           <p>Awarded by the Deputy Prime Minister and Minister of Education to 100 individuals nationwide who exemplify future leadership.</p>
         </div>
         <div class="sk-activity-meta">
@@ -330,16 +324,6 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Scholarship Recipient</h3>
-          <p>Scholarship Foundation for Korea Science Academy.</p>
-        </div>
-        <div class="sk-activity-meta">
-          <span>2021</span>
-        </div>
-      </article>
-
-      <article class="sk-activity">
-        <div>
           <h3>Academic Excellence Award and Comprehensive Studies Award</h3>
           <p>Chemistry Department, Korea Science Academy. 1st and 2nd semesters.</p>
         </div>
@@ -351,7 +335,7 @@ include-in-header:
       <article class="sk-activity">
         <div>
           <h3>Gold Prize</h3>
-          <p>World Invention Creativity Olympic (WICO).</p>
+          <p>World Invention Creativity Olympic (WICO), International Competition.</p>
         </div>
         <div class="sk-activity-meta">
           <span>2017</span>
@@ -360,7 +344,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>The Minister's Award</h3>
+          <h3>The Minister's Award <span class="sk-award-badge">National Prize</span></h3>
           <p>Korean Youth Invention Idea Contest, Ministry of Science and ICT, Republic of Korea.</p>
         </div>
         <div class="sk-activity-meta">

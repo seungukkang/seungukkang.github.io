@@ -407,7 +407,7 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
 
   h2 {
     color: var(--sk-accent);
-    font-size: 1.08rem;
+    font-size: 1.38rem;
     font-weight: 700;
     margin: 0 0 1.6rem;
     padding: 0;
@@ -429,7 +429,7 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
   }
 }
 
-.sk-about-section h2 .anchorjs-link {
+.sk-about-page .anchorjs-link {
   display: none !important;
 }
 
@@ -815,6 +815,38 @@ body.quarto-dark .navbar[data-bs-theme="dark"] {
     line-height: 1.5;
     margin: 0.22rem 0 0;
   }
+}
+
+.sk-award-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.45rem;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid var(--sk-border);
+  border-radius: 999px;
+  color: var(--sk-text-muted);
+  background: var(--sk-bg-secondary);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.35;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
+
+.sk-type-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.45rem;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid color-mix(in srgb, var(--sk-accent) 24%, var(--sk-border));
+  border-radius: 999px;
+  color: var(--sk-accent);
+  background: var(--sk-accent-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.35;
+  vertical-align: 0.08em;
+  white-space: nowrap;
 }
 
 .sk-activity-meta {
