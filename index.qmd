@@ -14,24 +14,13 @@ include-in-header:
   </div>
 
   <div class="sk-about-hero">
-    <img src="assets/img/Profile.jpg"
-         alt="Seunguk Kang"
-         class="sk-profile-img">
-    <div>
+    <div class="sk-profile-panel">
+      <img src="assets/img/Profile.jpg"
+           alt="Seunguk Kang"
+           class="sk-profile-img">
       <h1 class="sk-profile-name">Seunguk Kang</h1>
       <p class="sk-profile-role">Researcher · AI &amp; Computational Chemistry</p>
-      <p class="sk-about-intro">
-        Hi! I’m an undergraduate student in chemistry at KAIST, currently conducting research in Prof. Woo Youn Kim’s group.
-      </p>
-      <p class="sk-about-intro">
-        Previously, I worked in Prof. Mu-Hyun Baik’s group on computational studies of organometallic catalysts and photochemical systems, using DFT calculations, QM/MM, and molecular dynamics.
-      </p>
-      <p class="sk-about-intro">
-        Currently, I’m developing neural free energy estimation methods for molecular ensembles by combining molecular generative modeling with nonequilibrium work relations, including Jarzynski-equality-based sampling.
-      </p>
-      <p class="sk-about-intro">
-        In the long term, I hope to study biological challenges from a mechanistic, physics-grounded perspective. I’m especially interested in the molecular mechanisms underlying Alzheimer’s disease, including the dynamics of intrinsically disordered proteins.
-      </p>
+      <div class="sk-profile-divider" aria-hidden="true"></div>
       <div class="sk-social-links">
         <a href="https://github.com/seungukkang" target="_blank" rel="noopener" aria-label="GitHub profile">
           <i class="bi bi-github" aria-hidden="true"></i>
@@ -50,6 +39,20 @@ include-in-header:
           CV
         </a>
       </div>
+    </div>
+    <div class="sk-about-copy">
+      <p class="sk-about-intro">
+        Hi! I’m an undergraduate student in chemistry at KAIST, currently conducting research in <a class="sk-lab-link" href="https://wooyoun.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Woo Youn Kim’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a>.
+      </p>
+      <p class="sk-about-intro">
+        Previously, I worked in <a class="sk-lab-link" href="https://baik-laboratory.com/" target="_blank" rel="noopener noreferrer">Prof. Mu-Hyun Baik’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a> on computational studies of organometallic catalysts and photochemical systems, using DFT calculations, QM/MM, and molecular dynamics.
+      </p>
+      <p class="sk-about-intro">
+        Currently, I’m developing neural free energy estimation methods for molecular ensembles by combining molecular generative modeling with nonequilibrium work relations, including Jarzynski-equality-based sampling.
+      </p>
+      <p class="sk-about-intro">
+        In the long term, I hope to study biological challenges from a mechanistic, physics-grounded perspective. I’m especially interested in the molecular mechanisms underlying Alzheimer’s disease, including the dynamics of intrinsically disordered proteins.
+      </p>
     </div>
   </div>
 
