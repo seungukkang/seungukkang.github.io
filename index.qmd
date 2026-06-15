@@ -225,7 +225,7 @@ include-in-header:
     <div class="sk-activity-list">
       <article class="sk-activity">
         <div>
-          <h3>Spring Conference of the Korean Chemical Society <span class="sk-type-badge">Poster</span></h3>
+          <h3>Spring Conference of the Korean Chemical Society <span class="sk-type-badge type-poster">Poster</span></h3>
           <p>Chiral Indenyl Rh-Catalyzed Enantioselective Olefin 1,2-Arylamination</p>
         </div>
         <div class="sk-activity-meta">
@@ -235,7 +235,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Research Presentation for Chemistry Department Workshop <span class="sk-type-badge">Oral</span></h3>
+          <h3>Research Presentation for Chemistry Department Workshop <span class="sk-type-badge type-oral">Oral</span></h3>
           <p>Chiral Indenyl Rh-Catalyzed Enantioselective Olefin 1,2-Arylamination</p>
         </div>
         <div class="sk-activity-meta">
@@ -245,7 +245,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Future Chemists Research Conference of the Korean Chemical Society <span class="sk-type-badge">Poster</span></h3>
+          <h3>Future Chemists Research Conference of the Korean Chemical Society <span class="sk-type-badge type-poster">Poster</span></h3>
           <p>Biocompatible MOFs Developed by Facile Ultra-Fast Room Temperature Synthesis</p>
         </div>
         <div class="sk-activity-meta">
@@ -255,7 +255,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Thailand International Science Fair <span class="sk-type-badge">Oral</span></h3>
+          <h3>Thailand International Science Fair <span class="sk-type-badge type-oral">Oral</span></h3>
           <p>Improvement of Gas Adsorption Efficiency of Fragile Porphyrin-based MOFs</p>
         </div>
         <div class="sk-activity-meta">
@@ -265,7 +265,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Autumn Conference of the Korean Polymer Society <span class="sk-type-badge">Poster</span></h3>
+          <h3>Autumn Conference of the Korean Polymer Society <span class="sk-type-badge type-poster">Poster</span></h3>
           <p>Improvement of Gas Adsorption Efficiency of Fragile Porphyrin-based MOFs</p>
         </div>
         <div class="sk-activity-meta">
@@ -275,7 +275,7 @@ include-in-header:
 
       <article class="sk-activity">
         <div>
-          <h3>Japan Super Science Fair <span class="sk-type-badge">Oral</span></h3>
+          <h3>Japan Super Science Fair <span class="sk-type-badge type-oral">Oral</span></h3>
           <p>Optimizing Synthesis Conditions of PPF-4: Effect of Acid Addition on Crystal Growth</p>
         </div>
         <div class="sk-activity-meta">
