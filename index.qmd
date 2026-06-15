@@ -48,7 +48,7 @@ include-in-header:
         Previously, I worked in <a class="sk-lab-link" href="https://baik-laboratory.com/" target="_blank" rel="noopener noreferrer">Prof. Mu-Hyun Baik’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a> on computational studies of organometallic catalysts and photochemical systems, using DFT calculations, QM/MM, and molecular dynamics.
       </p>
       <p class="sk-about-intro">
-        Currently, I’m developing neural free energy estimation methods for molecular ensembles by combining molecular generative modeling with nonequilibrium work relations, including Jarzynski-equality-based sampling.
+        Currently, I’m developing neural free energy estimation methods for molecular ensembles by combining molecular generative modeling with nonequilibrium work relations, including Jarzynski equality based sampling.
       </p>
       <p class="sk-about-intro">
         In the long term, I hope to study biological challenges from a mechanistic, physics-grounded perspective. I’m especially interested in the molecular mechanisms underlying Alzheimer’s disease, including the dynamics of intrinsically disordered proteins.
