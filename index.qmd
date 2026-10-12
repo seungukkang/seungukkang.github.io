@@ -22,6 +22,10 @@ include-in-header:
       <p class="sk-profile-role">Researcher · AI &amp; Computational Chemistry</p>
       <div class="sk-profile-divider" aria-hidden="true"></div>
       <div class="sk-social-links">
+        <a class="sk-scholar-link" href="https://scholar.google.com/citations?user=_5y9eGkAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar profile">
+          <i class="bi bi-mortarboard" aria-hidden="true"></i>
+          Google Scholar
+        </a>
         <a href="https://github.com/seungukkang" target="_blank" rel="noopener" aria-label="GitHub profile">
           <i class="bi bi-github" aria-hidden="true"></i>
           GitHub
@@ -42,16 +46,13 @@ include-in-header:
     </div>
     <div class="sk-about-copy">
       <p class="sk-about-intro">
-        Hi! I’m an undergraduate student in chemistry at KAIST, currently conducting research in <a class="sk-lab-link" href="https://wooyoun.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Woo Youn Kim’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a>.
+        I’m an undergraduate chemistry student at KAIST, conducting research in <a class="sk-lab-link" href="https://wooyoun.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Prof. Woo Youn Kim’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a>. My current work combines molecular generative modeling with nonequilibrium statistical mechanics to estimate free-energy differences for molecular conformational ensembles.
       </p>
       <p class="sk-about-intro">
-        Previously, I worked in <a class="sk-lab-link" href="https://baik-laboratory.com/" target="_blank" rel="noopener noreferrer">Prof. Mu-Hyun Baik’s group<span class="sk-link-icon" aria-hidden="true"></span><span class="visually-hidden"> website</span></a> on computational studies of organometallic catalysts and photochemical systems, using DFT calculations, QM/MM, and molecular dynamics.
+        My research experience spans experimental materials chemistry, computational reaction mechanisms, and molecular machine learning. Across these areas, I’m interested in how molecular structure, local environments, and physical constraints shape chemical behavior.
       </p>
       <p class="sk-about-intro">
-        Currently, I’m developing neural free energy estimation methods for molecular ensembles by combining molecular generative modeling with nonequilibrium work relations, including Jarzynski equality based sampling.
-      </p>
-      <p class="sk-about-intro">
-        In the long term, I hope to study biological challenges from a mechanistic, physics-grounded perspective. I’m especially interested in the molecular mechanisms underlying Alzheimer’s disease, including the dynamics of intrinsically disordered proteins.
+        In the long term, I hope to apply these approaches to biological problems, including the molecular mechanisms of Alzheimer’s disease and the dynamics of intrinsically disordered proteins.
       </p>
     </div>
   </div>
@@ -68,6 +69,7 @@ include-in-header:
             <div>
               <h3>Korea Advanced Institute of Science and Technology (KAIST)</h3>
               <p class="sk-entry-role"><em>Bachelor of Science - Chemistry</em></p>
+              <p class="sk-entry-advisor">Expected graduation: February 2028</p>
             </div>
             <div class="sk-entry-meta">
               <span>Daejeon, Republic of Korea</span>
@@ -112,10 +114,20 @@ include-in-header:
               <span>Dec. 2025 - Present</span>
             </div>
           </div>
+          <h4 class="sk-entry-subheading">Neural Free-Energy Estimation for Molecular Ensembles</h4>
           <ul class="sk-entry-bullets">
-            <li>Developing a neural free energy estimator (NFEE) for estimating free energy differences of small-molecule ensembles using learned nonequilibrium generative paths.</li>
-            <li>Building AD-Agent, a mechanism-aware multi-agent framework for drug repurposing in Alzheimer’s disease.</li>
-            <li>Studied induced-fit antibody–antigen interaction modeling with a Riemannian Diffusion Bridge-based E(3)-equivariant generative framework.</li>
+            <li>Developing a free-energy estimation framework that uses a stochastic-interpolant model to propose transport paths between a harmonic reference and molecular Boltzmann distributions, with free-energy differences estimated from endpoint densities and forward–reverse path probabilities using Bennett acceptance ratio (BAR).</li>
+            <li>Adapted and retrained DiTMC for Boltzmann-weighted ensemble generation and built the main inference pipeline, including transport kernels, work calculations, reverse-start sampling, BAR estimation, and diagnostic analyses.</li>
+          </ul>
+          <h4 class="sk-entry-subheading">Full-Atom Antibody Design with Antigen Flexibility</h4>
+          <ul class="sk-entry-bullets">
+            <li>Investigated full-atom antibody design accounting for antigen flexibility and induced fit with an E(3)-equivariant generative framework.</li>
+            <li>Designed and implemented auxiliary losses for atomic clashes and backbone and side-chain geometry, accounting for valid disulfide bonds; developed visualization and validation tools to assess structural accuracy and physical plausibility.</li>
+          </ul>
+          <h4 class="sk-entry-subheading">AD-Agent: Mechanism-Aware Drug Repurposing for Alzheimer’s Disease</h4>
+          <ul class="sk-entry-bullets">
+            <li>Investigated mechanism-guided drug repurposing for Alzheimer’s disease using multi-agent reasoning.</li>
+            <li>Implemented OpenTargets retrieval functions to integrate mechanistic and clinical evidence with traceable sources.</li>
           </ul>
         </div>
       </article>
@@ -132,10 +144,17 @@ include-in-header:
               <span>Jan. 2024 - Dec. 2025</span>
             </div>
           </div>
+          <h4 class="sk-entry-subheading">Brønsted Acid-Assisted Solid-State [2+2] Photocycloaddition</h4>
+          <p class="sk-entry-advisor">Collaboration: Prof. Tehshik P. Yoon, University of Wisconsin–Madison</p>
           <ul class="sk-entry-bullets">
-            <li>Studied the mechanism of enantioselective amino-tetralin synthesis catalyzed by an indenyl-Rh complex.</li>
-            <li>Performed DFT benchmarking studies on substituent-dependent reactivity in relation to Hammett substituent constants.</li>
-            <li>Investigated the mechanism of a solid-state stereoselective [2+2] photocycloaddition.</li>
+            <li>Investigated how the local molecular environment and water influence selectivity and reactivity using DFT, molecular dynamics, and QM/MM calculations.</li>
+            <li>Applied explicit-environment modeling to reproduce the observed diastereoselectivity that conventional DFT solvation models could not capture. <a href="#photocycloaddition-manuscript">Manuscript in preparation.</a></li>
+          </ul>
+          <h4 class="sk-entry-subheading">Enantioselective Olefin 1,2-Arylamination with Chiral Indenyl–Rh Catalysts</h4>
+          <p class="sk-entry-advisor">Collaboration: Prof. Simon B. Blakey, Emory University</p>
+          <ul class="sk-entry-bullets">
+            <li>Investigated indenyl effects and how N-protecting groups modulate nitrogen nucleophilicity and chemoselectivity between arylamination and aziridination using DFT calculations.</li>
+            <li>Proposed additional ligand controls, including saturated indenyl derivatives, to test the model of asymmetric orbital interactions underlying the indenyl effect. <a href="#arylamination-publication">Published in ACS Catalysis (2026).</a></li>
           </ul>
         </div>
       </article>
@@ -152,9 +171,11 @@ include-in-header:
               <span>Jun. 2023 - Dec. 2023</span>
             </div>
           </div>
+          <h4 class="sk-entry-subheading">Tunable Electrical Conductance Anisotropy in MOF–Polymer Composites</h4>
           <ul class="sk-entry-bullets">
-            <li>Studied tunable electrical conductivity anisotropy in a MOF-polymer composite using Cu<sub>3</sub>(HHTP)<sub>2</sub>.</li>
-            <li>Investigated the applications of MOF-polymer composites as selective gas sensors.</li>
+            <li>Synthesized oxidation-sensitive Cu<sub>3</sub>(HHTP)<sub>2</sub> and its derivatives, maintaining material quality and consistency for conductive MOF–polymer composites.</li>
+            <li>Optimized voltage conditions for electric-field alignment of MOFs in a polymer matrix while avoiding solvent evaporation and material shortage in the ITO film. <a href="#mof-publication">Published in Small (2024); featured on the front cover.</a></li>
+            <li>Also investigated MOF–polymer composites as selective gas sensors.</li>
           </ul>
         </div>
       </article>
@@ -171,14 +192,15 @@ include-in-header:
               <span>Apr. 2019 - Dec. 2021</span>
             </div>
           </div>
+          <h4 class="sk-entry-subheading">Activation and Adsorption Studies of MOFs and Zeolites</h4>
           <ul class="sk-entry-bullets">
             <li>Performed gas and ion exchange experiments on zeolite single crystals under high-vacuum conditions.</li>
-            <li>Developed protocols to successfully activate fragile porphyrin-based metal-organic frameworks to improve their gas adsorption capacity.</li>
+            <li>Developed mild activation protocols for fragile porphyrin-based metal-organic frameworks to improve gas adsorption.</li>
           </ul>
-          <p class="sk-entry-subheading">Singapore International Collaborative Research Program</p>
+          <h4 class="sk-entry-subheading">Biocompatible Metal–Tartrate MOFs and Their Antibacterial Properties</h4>
+          <p class="sk-entry-advisor">Singapore International Collaborative Research Program · Team Leader</p>
           <ul class="sk-entry-bullets">
-            <li>Synthesized Zn-, Co-, and Ag-tartrate metal-organic frameworks and investigated their antibacterial properties.</li>
-            <li>Studied biocompatible metal-tartrate frameworks synthesized by the room-temperature rapid self-assembly method.</li>
+            <li>Synthesized Zn-, Co-, and Ag-tartrate MOFs through rapid room-temperature self-assembly and investigated their antibacterial properties.</li>
           </ul>
         </div>
       </article>
@@ -186,11 +208,23 @@ include-in-header:
   </section>
 
   <section class="sk-about-section" id="publications">
-    <h2>Publications</h2>
+    <h2>Publications &amp; Manuscripts</h2>
     <div class="sk-publication-list">
-      <article class="sk-publication">
+      <article class="sk-publication" id="photocycloaddition-manuscript">
         <div>
           <div class="sk-publication-kicker">
+            <span class="sk-publication-number">[J3]</span>
+            <span class="sk-pub-type-badge pub-manuscript">Manuscript in preparation</span>
+          </div>
+          <p class="sk-publication-title">Mechanistic Origins of Selectivity in Brønsted Acid-Assisted Solid-State [2+2] Photocycloaddition.</p>
+          <p class="sk-publication-authors">Choi, H.; <strong>Kang, S.</strong>; Baik, M.-H.</p>
+        </div>
+      </article>
+
+      <article class="sk-publication" id="arylamination-publication">
+        <div>
+          <div class="sk-publication-kicker">
+            <span class="sk-publication-number">[J2]</span>
             <span class="sk-pub-type-badge pub-journal">Journal</span>
           </div>
           <p class="sk-publication-title">Enantioselective Olefin 1,2-Arylamination Catalyzed by a Planar Chiral Indenyl-Rhodium(III) Complex.</p>
@@ -203,14 +237,16 @@ include-in-header:
         </div>
       </article>
 
-      <article class="sk-publication">
+      <article class="sk-publication" id="mof-publication">
         <div>
           <div class="sk-publication-kicker">
+            <span class="sk-publication-number">[J1]</span>
             <span class="sk-pub-type-badge pub-journal">Journal</span>
           </div>
           <p class="sk-publication-title">On-Demand Tunable Electrical Conductance Anisotropy in a MOF-Polymer Composite.</p>
           <p class="sk-publication-authors">Hong, T.; Lee, C.; Bak, Y.; Park, G.; Lee, H.; <strong>Kang, S.</strong>; Bae, T.-H.; Yoon, D. K.; Park, J. G.</p>
           <p class="sk-publication-venue"><em>Small</em> <strong>2024</strong>, 20(18), 2309469.</p>
+          <p class="sk-publication-venue"><em>Featured on the front cover.</em></p>
           <div class="sk-publication-links">
             <a href="https://doi.org/10.1002/smll.202309469" target="_blank" rel="noopener noreferrer">Link</a>
             <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/smll.202309469" target="_blank" rel="noopener noreferrer">PDF</a>
