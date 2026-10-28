@@ -6,7 +6,6 @@ website:
   title: "Seunguk Kang"
   description: "Researcher · AI & Computational Chemistry"
   site-url: "https://seungukkang.github.io"
-  favicon: "assets/img/favicon.ico"
 
   navbar:
     left:
